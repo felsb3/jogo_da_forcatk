@@ -1,0 +1,17 @@
+# requests
+certifi==2021.5.30
+charset-normalizer==2.0.4
+idna==3.2
+requests==2.26.0
+urllib3==1.26.6
+# Unidecode
+Unidecode==1.2.0
+# bs4
+beautifulsoup4==4.9.3
+bs4==0.0.1
+soupsieve==2.2.1
+
+
+
+# chardet==4.0.0
+# unicode==2.8
