@@ -46,8 +46,13 @@ while True:
             print(f'Que pena!!! Você perdeu! A palavra é {nome_palavra}!')
             break
 
-    if qtde_chances == 3 and escolha_letra not in palavra:
-        print(funcoes.dica())
+    if nivel == 'D':
+        if qtde_chances <= 3 and escolha_letra not in palavra:
+            print(funcoes.dica())
+
+    if nivel == 'F':
+        if qtde_chances <= 5 and escolha_letra not in palavra:
+            print(funcoes.dica())
 
     if escolha_letra not in escolhas:
         escolhas.append(escolha_letra)
