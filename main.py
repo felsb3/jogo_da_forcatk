@@ -16,11 +16,16 @@ for p in palavra:
     letras_armazenada.append(p)
 
 escolhas = list()  # criada apenas para inicializar a visualização das letras escolhidas pelo jogador
-escolha_da_dificuldade = str(input("Informe 'F' para Facil ou 'D' para Dificil: ").upper())
-if escolha_da_dificuldade == 'F':
-    qtde_chances = 10
-if escolha_da_dificuldade == 'D':
-    qtde_chances = 6  # valor arbitrário e pode ser modificado
+while True:
+    escolha_da_dificuldade = str(input("Informe 'F' para Facil ou 'D' para Dificil: ").upper())
+    if escolha_da_dificuldade == 'F':
+        qtde_chances = 10
+        nivel = 'F'
+        break
+    if escolha_da_dificuldade == 'D':
+        qtde_chances = 6  # valor arbitrário e pode ser modificado
+        nivel = 'D'
+        break
 
 while True:
     if letras_armazenada == letras:
