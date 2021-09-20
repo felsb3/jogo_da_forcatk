@@ -36,6 +36,16 @@ def dica():
             return texto[:texto.find('.')].center(55, ' ')
 
 
+def dica_inicial():
+    with open('palavra.txt') as palavra:
+        requisicao_palavra = requests.get(f'https://api.dicionario-aberto.net/word/{palavra.read()}')
+        xml = requisicao_palavra.json()
+        html = xml[0]['xml']
+        soup = BeautifulSoup(html, 'html.parser')
+        texto = soup.find('def').text
+        return texto[:texto.find('.')].center(55, ' ')
+
+
 def palavra_utilizada():
     with open('palavra.txt') as palavra:
         palavra_do_arquivo = palavra.read()
@@ -46,3 +56,6 @@ def palavra_utilizada():
 def palavra_do_arquivo():
     with open('palavra.txt') as palavra:
         return palavra.read()
+
+
+print(dica_inicial())
